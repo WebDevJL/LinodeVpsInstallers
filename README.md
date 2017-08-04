@@ -1,2 +1,1 @@
-# LinodeVpsInstallers
-How is installed my VPSes
+# How is installed my VPSes
