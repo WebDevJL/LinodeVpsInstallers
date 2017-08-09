@@ -1,0 +1,3 @@
+order allow,deny
+allow from 80.9.25.55
+allow from 81.252.62.189

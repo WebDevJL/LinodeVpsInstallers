@@ -1,0 +1,1 @@
+It works (<?php echo $_SERVER['SERVER_NAME']; ?>)
