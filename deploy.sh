@@ -3,7 +3,7 @@
 ##
 cd vps-manager
 #Install the basics
-bash server-commons/ste1.basics.sh
+bash server-commons/step1.basics.sh
 #Install of fail2ban
 bash server-commons/step20.fail2ban.sh
 #Install of  Apache 2
