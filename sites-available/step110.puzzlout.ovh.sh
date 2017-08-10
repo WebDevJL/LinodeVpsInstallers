@@ -1,3 +1,4 @@
+#!/bin/bash
 vDomain = "puzzlout.ovh"
 
 #Install of Portal on puzzlout.ovh"

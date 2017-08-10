@@ -1,3 +1,4 @@
+#!/bin/bash
 #Install of HTTPS with Let's Encrypt
 echo "Install of HTTPS with Let's Encrypt"
 sudo apt-get update && sudo apt-get upgrade

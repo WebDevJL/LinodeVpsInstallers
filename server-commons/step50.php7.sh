@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "Install of  PHP7"
 sudo apt-get install php7.0 php-pear libapache2-mod-php7.0 php7.0-mysql
 sudo apt-get install php7.0-curl php7.0-json php7.0-cgi

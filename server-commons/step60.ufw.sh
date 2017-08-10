@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "Check and modify UFW"
 sudo ufw status
 sudo ufw allow 80/tcp

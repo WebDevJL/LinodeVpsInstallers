@@ -1,3 +1,4 @@
+#!/bin/bash
 ##
 ## Server commons installs
 ##

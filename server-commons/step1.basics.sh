@@ -1,12 +1,13 @@
+#!/bin/bash
 echo "Setting up the basics..."
-vHostname = "puzzlout-www-main1.linode"
-vIpV4 = "139.162.143.169"
-vIpV6 = "2a01:7e01::f03c:91ff:fed4:d5bf"
-vDomain = "puzzlout.ovh"
-vUser = "puzzlout"
-vUserGroup = "puzzlout"
-vHomeIp = "80.9.25.55"
-vWorkIp = "81.252.62.189"
+vHostname="puzzlout-www-main1.linode"
+vIpV4="139.162.182.42"
+vIpV6="2a01:7e01::f03c:91ff:fed4:ca67"
+vDomain="puzzlout.ovh"
+vUser="puzzlout"
+vUserGroup="puzzlout"
+vHomeIp="80.9.25.55"
+vWorkIp="81.252.62.189"
 
 apt-get update && apt-get upgrade
 cp /etc/hostname /etc/hostname.bak

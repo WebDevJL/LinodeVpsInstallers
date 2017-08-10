@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "Install of fail2ban"
 apt-get update && apt-get upgrade -y
 apt-get install fail2ban

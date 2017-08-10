@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "Install of Composer"
 cd ~
 sudo apt-get install zip unzip php7.0-zip

@@ -1,3 +1,4 @@
+#!/bin/bash
 #Install of  phpMyAdmin
 echo "Install of  phpMyAdmin"
 sudo apt-get install mcrypt
