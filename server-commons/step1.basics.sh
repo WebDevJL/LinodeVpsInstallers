@@ -22,7 +22,6 @@ ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
 date
 adduser $vUser
 adduser $vUser sudo
-chown -R $vUser:$vUserGroup /var/www/
 mkdir -p ~/.ssh && sudo chmod -R 700 ~/.ssh/
 su -
 vim /etc/ssh/sshd_config
