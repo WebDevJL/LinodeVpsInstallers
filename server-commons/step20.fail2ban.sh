@@ -20,6 +20,7 @@ vim /etc/fail2ban/jail.local
 # 	Set action to "%(action_mwl)s" to send all info when ban happens
 # line 219:
 # 	Set under [sshd] section next few lines "enabled = true", "maxretry = 6" which will enable this specific jail filter
+cp /etc/fail2ban/jail.local /vps-manager/assets/conf/fail2ban/jail.local
 fail2ban-client status
 sudo netstat -tulpn
 echo "Done with fail2ban"

@@ -1,5 +1,5 @@
 #!/bin/bash
-vDomain = "puzzlout.ovh"
+vDomain="puzzlout.ovh"
 
 #Install of Portal on puzzlout.ovh"
 echo "Install of Portal on $vDomain"
