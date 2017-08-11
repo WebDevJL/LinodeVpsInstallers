@@ -24,9 +24,11 @@ adduser $vUser
 adduser $vUser sudo
 mkdir -p ~/.ssh && sudo chmod -R 700 ~/.ssh/
 su -
+exit
 vim /etc/ssh/sshd_config
 # Set PermitRootLogin to no 
 # Do not set PasswordAuthentication to no yet
 echo 'AddressFamily inet' | sudo tee -a /etc/ssh/sshd_config
 sudo systemctl restart sshd
 su -
+exit
