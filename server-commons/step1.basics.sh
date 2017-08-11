@@ -1,8 +1,8 @@
 #!/bin/bash
 echo "Setting up the basics..."
 vHostname="puzzlout-www-main1.linode"
-vIpV4="139.162.182.42"
-vIpV6="2a01:7e01::f03c:91ff:fed4:ca67"
+vIpV4="172.104.131.57"
+vIpV6="2a01:7e01::f03c:91ff:fed4:fb47"
 vDomain="puzzlout.ovh"
 vUser="puzzlout"
 vUserGroup="puzzlout"
@@ -25,6 +25,8 @@ adduser $vUser sudo
 mkdir -p ~/.ssh && sudo chmod -R 700 ~/.ssh/
 su -
 vim /etc/ssh/sshd_config
+# Set PermitRootLogin to no 
+# Do not set PasswordAuthentication to no yet
 echo 'AddressFamily inet' | sudo tee -a /etc/ssh/sshd_config
 sudo systemctl restart sshd
 su -

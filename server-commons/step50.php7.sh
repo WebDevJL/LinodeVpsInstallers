@@ -7,4 +7,7 @@ vim /etc/php/7.0/apache2/php.ini
 # see assets/php.conf
 sudo mkdir /var/log/php
 sudo chown www-data /var/log/php
+echo "Reloading apache2..."
 sudo systemctl restart apache2
+echo "Apache2 reloaded!"
+echo "Done with php7 install."
