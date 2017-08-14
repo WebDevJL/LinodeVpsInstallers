@@ -6,11 +6,12 @@ echo "Install of  Apache 2"
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install apache2
 chown -R $vUser:$vUserGroup /var/www/
-sudo cp /etc/apache2/apache2.conf /etc/apache2/apache2.backup.conf
-sudo vim /etc/apache2/apache2.conf
+sudo cp /etc/apache2/apache2.conf /etc/apache2/apache2.conf.bak
+# sudo vim /etc/apache2/apache2.conf
 # Set the following :
 #KeepAlive Off
-sudo cp /etc/apache2/apache2.conf /vps-manager/assets/conf/apache2/apache2.conf
+#sudo cp /etc/apache2/apache2.conf /vps-manager/assets/conf/apache2/apache2.conf
+sudo cp /vps-manager/assets/conf/apache2/apache2.conf /etc/apache2/apache2.conf
 
 sudo cp /etc/apache2/mods-available/mpm_prefork.conf  /etc/apache2/mods-available/mpm_prefork.back.conf
 sudo cp /vps-manager/assets/mpm_prefork.base.conf /etc/apache2/mods-available/mpm_prefork.conf
