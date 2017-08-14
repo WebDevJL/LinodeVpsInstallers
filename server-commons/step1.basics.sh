@@ -25,6 +25,7 @@ adduser $vUser sudo
 mkdir -p ~/.ssh && sudo chmod -R 700 ~/.ssh/
 su -
 exit
+exit
 vim /etc/ssh/sshd_config
 cp /etc/ssh/sshd_config /vps-manager/assets/conf/ssh/sshd_config
 # Set PermitRootLogin to no 
