@@ -1,1 +1,1 @@
-It works (<?php echo $_SERVER['SERVER_NAME']; ?>)
+It works (<?php echo "on" . $_SERVER['SERVER_NAME']; ?>)
