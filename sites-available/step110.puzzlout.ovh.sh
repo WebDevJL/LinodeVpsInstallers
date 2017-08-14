@@ -6,7 +6,7 @@ echo "Install of Portal on $vDomain"
 mkdir -p /var/www/$vDomain/{public_html,logs}
 cd /var/www/$vDomain/public_html
 git clone https://github.com/puzzlout/portal
-cp /vps-manager/html/index.php /var/www/$vDomain/public_html/
+cp /vps-manager/assets/html/index.php /var/www/$vDomain/public_html/
 sudo cp /vps-manager/assets/sites-available/$vDomain.conf /etc/apache2/sites-available/$vDomain.conf
 sudo vim /etc/apache2/sites-available/$vDomain.conf
 #Generate the certs Let's Encrypt for puzzlout.ovh`
