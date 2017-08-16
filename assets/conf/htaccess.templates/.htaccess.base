@@ -1,0 +1,11 @@
+# Comment out if you need the web application to be crawled.
+#Header set X-Robots-Tag "noindex"
+
+# 10 Simple Ways to Secure Your Website
+# Source: https://www.perpetual-beta.org/weblog/security-headers.html#rule-8470-2-establish-a-cross-domain-meta-policy
+#
+# Rule 1: Avoid Access-Control-Allow-Origin: *
+#Access-Control-Allow-Origin: http://example.com
+
+# Rule 2: Establish a Cross-Domain Meta Policy
+Header set X-Permitted-Cross-Domain-Policies "none"
