@@ -25,7 +25,7 @@ cd ..
 echo "Install of  phpMyAdmin for $vDomain"
 mkdir -p /var/www/sql.$vDomain/{public_html,logs}
 cd /var/www/sql.$vDomain/public_html
-cp /vps-manager/conf/phpmyadmin/.htaccess.phpmyadmin /var/www/sql.$vDomain/public_html/phpmyadmin/.htaccess
+cp /vps-manager/assets/conf/phpmyadmin/.htaccess /var/www/sql.$vDomain/public_html/phpmyadmin/.htaccess
 cd /var/www/sql.$vDomain/public_html
 sudo ln -s /usr/share/phpmyadmin
 cd ~

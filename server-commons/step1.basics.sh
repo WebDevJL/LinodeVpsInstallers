@@ -26,8 +26,9 @@ mkdir -p ~/.ssh && sudo chmod -R 700 ~/.ssh/
 su -
 exit
 exit
+cp /vps-manager/assets/conf/ssh/sshd_config /etc/ssh/sshd_config
 vim /etc/ssh/sshd_config
-cp /etc/ssh/sshd_config /vps-manager/assets/conf/ssh/sshd_config
+#cp /etc/ssh/sshd_config /vps-manager/assets/conf/ssh/sshd_config
 # Set PermitRootLogin to no 
 # Do not set PasswordAuthentication to no yet
 echo 'AddressFamily inet' | sudo tee -a /etc/ssh/sshd_config
