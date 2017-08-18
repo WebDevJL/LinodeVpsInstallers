@@ -26,6 +26,7 @@ composer create-project dolibarr/dolibarr erp
 sudo vim /etc/apache2/sites-available/erp.puzzlout.ovh.conf
 sudo vim /etc/apache2/sites-available/erp.puzzlout.ovh-le-ssl.conf
 sudo systemctl reload apache2
-# follow instruction @ https://erp.puzzlout.ovh
+sudo chmod -R 777 /var/www/erp.puzzlout.ovh/public_html/erp/
+echo "Follow instruction @ https://erp.puzzlout.ovh"
 cd ~
 cd ..
