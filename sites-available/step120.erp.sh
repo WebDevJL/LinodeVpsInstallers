@@ -4,8 +4,6 @@ vDomain="erp.puzzlout.ovh"
 #Install of ERP on erp.puzzlout.ovh"
 echo "Install of ERP on $vDomain"
 mkdir -p /var/www/$vDomain/{public_html,logs}
-cd /var/www/$vDomain/public_html
-git clone https://github.com/puzzlout/portal
 cp /vps-manager/assets/html/index.php /var/www/$vDomain/public_html/
 sudo cp /vps-manager/assets/sites-available/$vDomain.conf /etc/apache2/sites-available/$vDomain.conf
 sudo vim /etc/apache2/sites-available/$vDomain.conf
