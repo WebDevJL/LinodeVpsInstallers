@@ -30,6 +30,8 @@ cd /var/www/sql.$vDomain/public_html
 sudo ln -s /usr/share/phpmyadmin
 cd ~
 cd ..
+#Install of Portal on sql.puzzlout.ovh"
+echo "Install of Portal on sql.$vDomain"
 sudo cp /vps-manager/assets/sites-available/sql.$vDomain.conf /etc/apache2/sites-available/sql.$vDomain.conf
 sudo vim /etc/apache2/sites-available/sql.$vDomain.conf
 cd /opt/letsencrypt
