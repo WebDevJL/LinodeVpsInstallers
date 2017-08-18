@@ -1,3 +1,4 @@
+#!/bin/bash
 
 #Install of  Dolibarr on erp.puzzlout.ovh
 echo "Install of  Dolibarr on $vDomain"
