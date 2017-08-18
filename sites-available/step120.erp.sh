@@ -2,7 +2,7 @@
 vDomain="erp.puzzlout.ovh"
 
 #Install of ERP on erp.puzzlout.ovh"
-echo "Install of Portal on $vDomain"
+echo "Install of ERP on $vDomain"
 mkdir -p /var/www/$vDomain/{public_html,logs}
 cd /var/www/$vDomain/public_html
 git clone https://github.com/puzzlout/portal
