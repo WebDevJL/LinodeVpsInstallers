@@ -38,6 +38,9 @@ cd /opt/letsencrypt
 sudo -H ./letsencrypt-auto --apache -d sql.$vDomain
 sudo -H ./letsencrypt-auto --apache --renew-by-default -d sql.$vDomain
 echo "@monthly root /opt/letsencrypt/letsencrypt-auto --quiet --apache --renew-by-default -d sql.$vDomain >> /var/log/letsencrypt/letsencrypt-auto-update.log" | sudo tee --append /etc/crontab
+# Bug: https://community.letsencrypt.org/t/apache-sslcertificatefile-error-does-not-exist-or-is-empty/14995/13
+sudo chmod -R 755 /etc/letsencrypt/live
+sudo chmod -R 755 /etc/letsencrypt/archive
 sudo a2ensite sql.$vDomain.conf
 sudo systemctl reload apache2
 cd ~

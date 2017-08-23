@@ -13,6 +13,9 @@ cd /opt/letsencrypt
 sudo -H ./letsencrypt-auto --apache -d $vDomain
 sudo ls /etc/letsencrypt/live #To list the certs of Let's encrypt
 sudo -H ./letsencrypt-auto --apache --renew-by-default -d $vDomain
+# Bug: https://community.letsencrypt.org/t/apache-sslcertificatefile-error-does-not-exist-or-is-empty/14995/13
+sudo chmod -R 755 /etc/letsencrypt/live
+sudo chmod -R 755 /etc/letsencrypt/archive
 #echo "@monthly root /opt/letsencrypt/letsencrypt-auto --quiet --apache --renew-by-default -d $vDomain >> /var/log/letsencrypt/letsencrypt-auto-update.log" | sudo tee --append /etc/crontab
 sudo a2ensite $vDomain.conf
 sudo systemctl reload apache2
