@@ -1,46 +1,45 @@
 #!/bin/bash
 #$1 => the domain to install
-$vDomain=$1
-echo "Install of Portal on $vDomain"
-mkdir -p /var/www/$vDomain/{public_html,logs}
-cd /var/www/$vDomain/public_html
+echo "Install of Portal on $1"
+mkdir -p /var/www/$1/{public_html,logs}
+cd /var/www/$1/public_html
 git clone https://github.com/puzzlout/portal
-cp /vps-manager/assets/html/index.php /var/www/$vDomain/public_html/
-sudo cp /vps-manager/assets/sites-available/$vDomain.conf /etc/apache2/sites-available/$vDomain.conf
-sudo vim /etc/apache2/sites-available/$vDomain.conf
+cp /vps-manager/assets/html/index.php /var/www/$1/public_html/
+sudo cp /vps-manager/assets/sites-available/$1.conf /etc/apache2/sites-available/$1.conf
+sudo vim /etc/apache2/sites-available/$1.conf
 #Generate the certs Let's Encrypt for puzzlout.ovh`
-echo "Generate the certs Let's Encrypt for $vDomain"
+echo "Generate the certs Let's Encrypt for $1"
 cd /opt/letsencrypt
-sudo -H ./letsencrypt-auto --apache -d $vDomain -d www.$vDomain
+sudo -H ./letsencrypt-auto --apache -d $1 -d www.$1
 sudo ls /etc/letsencrypt/live #To list the certs of Let's encrypt
-sudo -H ./letsencrypt-auto --apache --renew-by-default -d $vDomain -d www.$vDomain
-#echo "@monthly root /opt/letsencrypt/letsencrypt-auto --quiet --apache --renew-by-default -d $vDomain -d www.$vDomain >> /var/log/letsencrypt/letsencrypt-auto-update.log" | sudo tee --append /etc/crontab
-sudo a2ensite $vDomain.conf
+sudo -H ./letsencrypt-auto --apache --renew-by-default -d $1 -d www.$1
+#echo "@monthly root /opt/letsencrypt/letsencrypt-auto --quiet --apache --renew-by-default -d $1 -d www.$1 >> /var/log/letsencrypt/letsencrypt-auto-update.log" | sudo tee --append /etc/crontab
+sudo a2ensite $1.conf
 sudo systemctl reload apache2
 cd ~
 cd ..
 
 #Install of  phpMyAdmin for puzzlout.ovh
-echo "Install of  phpMyAdmin for $vDomain"
-mkdir -p /var/www/sql.$vDomain/{public_html,logs}
-cd /var/www/sql.$vDomain/public_html
-cp /vps-manager/assets/conf/phpmyadmin/.htaccess /var/www/sql.$vDomain/public_html/phpmyadmin/.htaccess
-cd /var/www/sql.$vDomain/public_html
+echo "Install of  phpMyAdmin for $1"
+mkdir -p /var/www/sql.$1/{public_html,logs}
+cd /var/www/sql.$1/public_html
+cp /vps-manager/assets/conf/phpmyadmin/.htaccess /var/www/sql.$1/public_html/phpmyadmin/.htaccess
+cd /var/www/sql.$1/public_html
 sudo ln -s /usr/share/phpmyadmin
 cd ~
 cd ..
 #Install of Portal on sql.puzzlout.ovh"
-echo "Install of Portal on sql.$vDomain"
-sudo cp /vps-manager/assets/sites-available/sql.$vDomain.conf /etc/apache2/sites-available/sql.$vDomain.conf
-sudo vim /etc/apache2/sites-available/sql.$vDomain.conf
+echo "Install of Portal on sql.$1"
+sudo cp /vps-manager/assets/sites-available/sql.$1.conf /etc/apache2/sites-available/sql.$1.conf
+sudo vim /etc/apache2/sites-available/sql.$1.conf
 cd /opt/letsencrypt
-sudo -H ./letsencrypt-auto --apache -d sql.$vDomain
-sudo -H ./letsencrypt-auto --apache --renew-by-default -d sql.$vDomain
-echo "@monthly root /opt/letsencrypt/letsencrypt-auto --quiet --apache --renew-by-default -d sql.$vDomain >> /var/log/letsencrypt/letsencrypt-auto-update.log" | sudo tee --append /etc/crontab
+sudo -H ./letsencrypt-auto --apache -d sql.$1
+sudo -H ./letsencrypt-auto --apache --renew-by-default -d sql.$1
+echo "@monthly root /opt/letsencrypt/letsencrypt-auto --quiet --apache --renew-by-default -d sql.$1 >> /var/log/letsencrypt/letsencrypt-auto-update.log" | sudo tee --append /etc/crontab
 # Bug: https://community.letsencrypt.org/t/apache-sslcertificatefile-error-does-not-exist-or-is-empty/14995/13
 sudo chmod -R 755 /etc/letsencrypt/live
 sudo chmod -R 755 /etc/letsencrypt/archive
-sudo a2ensite sql.$vDomain.conf
+sudo a2ensite sql.$1.conf
 sudo systemctl reload apache2
 cd ~
 cd ..
