@@ -3,7 +3,7 @@
   #Header set X-Robots-Tag "noindex,nofollow"
 
   # 10 Simple Ways to Secure Your Website
-  # Source: https://www.perpetual-beta.org/weblog/security-headers.html#rule-8470-2-establish-a-cross-domain-meta-policy
+  # Source: https://www.perpetual-beta.org/weblog/security-headers.html
   #
   # Rule 1: Avoid Access-Control-Allow-Origin: *
   # More details: https://www.perpetual-beta.org/weblog/security-headers.html#rule-8470-1-avoid-access-control-allow-origin-
