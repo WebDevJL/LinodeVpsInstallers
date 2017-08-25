@@ -1,7 +1,7 @@
 # Web Application Firewall (WAF) installation
 echo "Beginning Web Application Firewall (WAF) installation..."
 echo "Let's start with ModSecurity..."
-sudo apt-update
+sudo apt-get update
 # https://www.netnea.com/cms/apache-tutorial-6_embedding-modsecurity/
 sudo apt-get install libapache2-mod-security2 -y
 sudo apachectl -M | grep --color security2

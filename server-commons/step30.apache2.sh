@@ -22,6 +22,8 @@ sudo cp /vps-manager/assets/mpm_prefork.base.conf /etc/apache2/mods-available/mp
 sudo a2dismod mpm_event
 sudo a2enmod mpm_prefork
 sudo a2enmod headers
+sudo a2enmod expires
+apachectl -t -D DUMP_MODULES
 echo "Desactivate 000-default"
 sudo a2dissite 000-default.conf
 echo "Reloading apache2..."
