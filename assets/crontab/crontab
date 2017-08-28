@@ -1,0 +1,24 @@
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# m h dom mon dow user	command
+17 *	* * *	root    cd / && run-parts --report /etc/cron.hourly
+25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+# Automatic MySQL Backups
+0  1    1 * * 	root 	/bin/bash /vps-manager/assets/crontab/mysql/create.backup.sh > /var/mysql/logs/crontab.log
+31-40 16   28 8 1 	root	/bin/bash /var/mysql/tasks/create.backup.sh > /var/mysql/logs/crontab.log
+# Let's Encrypt upgrade
+@weekly root cd /opt/letsencrypt && git pull >> /var/log/letsencrypt/letsencrypt-auto-update.log
+# Let's Encrypt SSL certificate renewals
+@monthly root /opt/letsencrypt/letsencrypt-auto --quiet --apache --renew-by-default -d sql.puzzlout.ovh >> /var/log/letsencrypt/letsencrypt-auto-update.log
+@monthly root /opt/letsencrypt/letsencrypt-auto --quiet --apache --renew-by-default -d erp.puzzlout.ovh >> /var/log/letsencrypt/letsencrypt-auto-update.log
+@monthly root /opt/letsencrypt/letsencrypt-auto --quiet --apache --renew-by-default -d puzzlout.ovh -d www.puzzlout.ovh >> /var/log/letsencrypt/letsencrypt-auto-update.log
+@monthly root /opt/letsencrypt/letsencrypt-auto --quiet --apache --renew-by-default -d puzzlout.com -d www.puzzlout.com >> /var/log/letsencrypt/letsencrypt-auto-update.log
