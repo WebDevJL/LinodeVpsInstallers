@@ -1,6 +1,7 @@
 #!/bin/bash
 echo "Perform a MySQL backup..."
-bash /var/mysql/backups/create.backup.sh
+#bash /var/mysql/backups/create.backup.sh
+cd /var/mysql/backups
 newDirForBackup=$( date '+%Y-%m-%d' )
 sudo mkdir $newDirForBackup
 cd $newDirForBackup
