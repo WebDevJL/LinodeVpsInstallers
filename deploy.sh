@@ -11,6 +11,7 @@ bash server-commons/step20.fail2ban.sh
 bash server-commons/step30.apache2.sh
 #Install of  MySQL
 bash server-commons/step40.mysql.sh
+bash server-commons/step45.mysql.automatic.backups.sh
 #Install of  PHP7
 bash server-commons/step50.php7.sh
 #Check and modify UFW

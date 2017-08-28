@@ -1,3 +1,4 @@
+#!/bin/bash
 # Web Application Firewall (WAF) installation
 echo "Beginning Web Application Firewall (WAF) installation..."
 echo "Let's start with ModSecurity..."
