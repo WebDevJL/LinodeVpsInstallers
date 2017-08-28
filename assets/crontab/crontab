@@ -14,7 +14,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
 # Automatic MySQL Backups
 0  1    1 * * 	root 	/bin/bash /vps-manager/assets/crontab/mysql/create.backup.sh > /var/mysql/logs/crontab.log
-31-40 16   28 8 1 	root	/bin/bash /var/mysql/tasks/create.backup.sh > /var/mysql/logs/crontab.log
 # Let's Encrypt upgrade
 @weekly root cd /opt/letsencrypt && git pull >> /var/log/letsencrypt/letsencrypt-auto-update.log
 # Let's Encrypt SSL certificate renewals
