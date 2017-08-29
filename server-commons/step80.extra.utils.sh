@@ -10,3 +10,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get update && sudo apt-get install yarn
 yarn --version
 yarn add webpack --dev
+
+echo "Update pip (Python package manager)"
+pip install --upgrade pip
+echo "pip is up-to-date!"
