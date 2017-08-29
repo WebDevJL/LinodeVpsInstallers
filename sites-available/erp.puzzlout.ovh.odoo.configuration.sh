@@ -14,3 +14,4 @@ sudo systemctl status odoo-server
 sudo systemctl enable odoo-server
 # Reboot Linode VPS
 sudo journalctl -u odoo-server
+# Browser Odoo on : 172.104.145.67:8069
