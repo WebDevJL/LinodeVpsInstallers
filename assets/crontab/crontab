@@ -7,13 +7,13 @@
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
-# m h dom mon dow user	command
-17 *	* * *	root    cd / && run-parts --report /etc/cron.hourly
-25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
-47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
-52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+# m h dom mon dow user command
+17 * * * *	root    cd / && run-parts --report /etc/cron.hourly
+25 6 * * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6 * * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6 1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
 # Automatic MySQL Backups
-0  1    1 * * 	root 	/bin/bash /vps-manager/assets/crontab/mysql/create.backup.sh > /var/mysql/logs/crontab.log
+0 1 * * *	root 	/bin/bash /var/mysql/tasks/create.backup.sh > /var/mysql/logs/crontab.log
 # Let's Encrypt upgrade
 @weekly root cd /opt/letsencrypt && git pull >> /var/log/letsencrypt/letsencrypt-auto-update.log
 # Let's Encrypt SSL certificate renewals
