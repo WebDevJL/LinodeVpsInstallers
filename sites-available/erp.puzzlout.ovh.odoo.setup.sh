@@ -14,3 +14,13 @@ echo "Begin install of Odoo..."
 su -
 sudo pip install -r /opt/odoo/doc/requirements.txt
 sudo pip install -r /opt/odoo/requirements.txt
+sudo curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt install -y nodejs
+sudo npm install -g less less-plugin-clean-css
+
+# Install Stable Wkhtmltopdf Version
+cd /tmp
+sudo wget https://downloads.wkhtmltopdf.org/0.12/0.12.1/wkhtmltox-0.12.1_linux-trusty-amd64.deb
+sudo dpkg -i wkhtmltox-0.12.1_linux-trusty-amd64.deb
+sudo dpkg -i wkhtmltox-0.12.1_linux-trusty-amd64.deb
+sudo cp /usr/local/bin/wkhtmltoimage /usr/bin
