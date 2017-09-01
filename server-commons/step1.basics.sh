@@ -27,6 +27,8 @@ read -n1 -rsp $'If you see "deflate_module (shared)", pPress any key to continue
 adduser $vUser
 adduser $vUser sudo
 mkdir -p ~/.ssh && sudo chmod -R 700 ~/.ssh/
+mkdir /home/$vUser/www
+chown -R $vUser /home/$vUser/www
 su -
 exit
 exit
