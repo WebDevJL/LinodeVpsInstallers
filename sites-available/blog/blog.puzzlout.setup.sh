@@ -8,6 +8,7 @@ cd /home/puzzlout/www/$1/public_html
 wget https://wordpress.org/latest.tar.gz
 tar -xzvf latest.tar.gz 
 rm latest.tar.gz
+sudo chmod -R 777 wordpress
 sudo cp /vps-manager/assets/sites-available/$1.conf /etc/apache2/sites-available/$1.conf
 sudo vim /etc/apache2/sites-available/$1.conf
 # Generate the certs Let's Encrypt for the domain
