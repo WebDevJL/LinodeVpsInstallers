@@ -3,9 +3,8 @@ cd /vps-manager
 
 echo "Setting up the basics..."
 vHostname="puzzlout-www-main1.linode"
-vIpV4="172.104.131.57"
-vIpV6="2a01:7e01::f03c:91ff:fed4:fb47"
-vDomain="puzzlout.ovh"
+vIpV4="139.162.185.121"
+vIpV6="2a01:7e01::f03c:91ff:fecf:8dd8"
 vUser="puzzlout"
 vUserGroup="puzzlout"
 vHomeIp="80.9.25.55"
