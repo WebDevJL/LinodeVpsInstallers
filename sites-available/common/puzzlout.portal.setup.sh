@@ -32,13 +32,7 @@ cd ..
 echo "Install of Portal on sql.$1"
 sudo cp /vps-manager/assets/sites-available/sql.$1.conf /etc/apache2/sites-available/sql.$1.conf
 sudo vim /etc/apache2/sites-available/sql.$1.conf
-cd /opt/letsencrypt
-sudo -H ./letsencrypt-auto --apache -d sql.$1
-sudo -H ./letsencrypt-auto --apache --renew-by-default -d sql.$1
-echo "@monthly root /opt/letsencrypt/letsencrypt-auto --quiet --apache --renew-by-default -d sql.$1 >> /var/log/letsencrypt/letsencrypt-auto-update.log" | sudo tee --append /etc/crontab
-# Bug: https://community.letsencrypt.org/t/apache-sslcertificatefile-error-does-not-exist-or-is-empty/14995/13
-sudo chmod -R 755 /etc/letsencrypt/live
-sudo chmod -R 755 /etc/letsencrypt/archive
+sudo bash /vps-manager/sites-available/common/website-ssl-setup.sh $1
 sudo a2ensite sql.$1.conf
 sudo systemctl reload apache2
 cd ~

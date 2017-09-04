@@ -8,4 +8,6 @@ sudo -H ./letsencrypt-auto --apache --renew-by-default -d $1
 # Bug: https://community.letsencrypt.org/t/apache-sslcertificatefile-error-does-not-exist-or-is-empty/14995/13
 sudo chmod -R 755 /etc/letsencrypt/live
 sudo chmod -R 755 /etc/letsencrypt/archive
+cd ~
+cd ..
 # End bug 
