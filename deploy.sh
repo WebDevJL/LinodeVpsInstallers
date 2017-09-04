@@ -2,7 +2,7 @@
 ##
 ## Server commons installs
 ##
-cd vps-manager
+cd ~/vps-manager
 # Install the basics
 bash server-commons/basics.sh
 # Install of fail2ban
