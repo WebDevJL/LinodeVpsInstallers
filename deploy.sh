@@ -6,7 +6,7 @@ cd ~/vps-manager
 ##
 
 # Install the basics
-bash server-commons/basics.sh
+bash server-commons/basics.parts.sh
 # Install and configure the web server
 bash server-commons/web.parts.sh
 # Install of Composer
