@@ -18,4 +18,11 @@ bash server-commons/basics/configure.ssh.sh
 
 bash user-management/add.user.sh $vUser $vUserGroup
 
+# Install of fail2ban
+bash server-commons/basics/fail2ban.sh
+# Check and modify UFW
+bash server-commons/basics/ufw.config.sh
+# Install of HTTPS with Let's Encrypt
+bash server-commons/basics/ssl.setup.sh
+
 cd ~
