@@ -13,11 +13,10 @@ bash server-commons/apache2.cache.sh
 bash server-commons/apache2.compression.sh
 #Install of  MySQL
 bash server-commons/mysql.setup.sh
-bash server-commons/mysql.automatic.backups.sh
+# Mysql backups require a backup mysql user
+#bash server-commons/mysql.automatic.backups.sh
 #Install of  PHP7
 bash server-commons/php7.setup.sh
-#Install of  phpMyAdmin
-bash server-commons/phpmyadmin.setup.sh
 #Check and modify UFW
 bash server-commons/ufw.config.sh
 #Install of Composer
@@ -26,6 +25,8 @@ bash server-commons/composer.setup.sh
 bash server-commons/extra.utils.sh
 #Install of HTTPS with Let's Encrypt
 bash server-commons/ssl.setup.sh
+#Install of  phpMyAdmin
+bash server-commons/phpmyadmin.setup.sh
 
 ##
 ## Web sites setup
