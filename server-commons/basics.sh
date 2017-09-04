@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /vps-manager
+cd ~/vps-manager
 
 echo "Setting up the basics..."
 vHostname="puzzlout-www-main1.linode"
@@ -19,4 +19,3 @@ bash server-commons/basics/configure.ssh.sh
 bash user-management/add.user.sh $vUser $vUserGroup
 
 cd ~
-cd ..
