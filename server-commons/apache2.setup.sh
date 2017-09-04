@@ -1,11 +1,8 @@
 #!/bin/bash
-vUser="puzzlout"
-vUserGroup="puzzlout"
 
 echo "Install of  Apache 2"
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install apache2
-chown -R $vUser:$vUserGroup /var/www/
 
 sudo cp /etc/apache2/apache2.conf /etc/apache2/apache2.conf.bak
 # sudo vim /etc/apache2/apache2.conf
