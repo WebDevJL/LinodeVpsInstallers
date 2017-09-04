@@ -13,3 +13,5 @@ cp /etc/phpmyadmin/config.inc.php /etc/phpmyadmin/config.inc.php.bak
 cp assets/conf/phpmyadmin/config.inc.php /etc/phpmyadmin/config.inc.php
 sudo vim /etc/phpmyadmin/config.inc.php
 echo "Done installing phpMyAdmin."
+
+cd ~
