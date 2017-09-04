@@ -1,4 +1,6 @@
 #!/bin/bash
+cd ~/vps-manager
+
 echo "Install of  Node, NPM, Yarn and webpack"
 sudo apt-get install nodejs
 sudo apt-get install npm
@@ -14,3 +16,5 @@ yarn add webpack --dev
 echo "Update pip (Python package manager)"
 pip install --upgrade pip
 echo "pip is up-to-date!"
+
+cd ~
