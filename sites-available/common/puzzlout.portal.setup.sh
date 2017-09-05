@@ -10,7 +10,7 @@ echo "Create the directories for domain $1 => \n /home/$2/www/$1/public_html and
 mkdir -p /home/$2/www/$1/{public_html,logs}
 echo "Checking /home/$2/www"
 ls -l /home/$2/www
-echo "Checking /home/$2/www/$2"
+echo "Checking /home/$2/www/$1"
 ls -l /home/$2/www/$1
 read -n1 -rsp $'If all the directories created are displayed, press any key to continue otherwise Ctrl+C to exit...\n'
 echo "Browser to /home/$2/www/$1/public_html..."
