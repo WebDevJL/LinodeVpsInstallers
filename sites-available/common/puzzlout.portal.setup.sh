@@ -24,6 +24,8 @@ echo "Enable $1 website..."
 sudo a2ensite $1.conf
 echo "... and finally reload Apache!"
 sudo systemctl reload apache2
+read -n1 -rsp $'If Apache reloaded fine, press any key to continue otherwise Ctrl+C to exit...\n'
+
 cd ~
 
 #Install of  phpMyAdmin for puzzlout.ovh
