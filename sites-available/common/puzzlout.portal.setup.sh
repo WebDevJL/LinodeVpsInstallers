@@ -2,11 +2,6 @@
 #$1 => the domain to install
 #$2 => the UNIX user
 
-echo "Browse to home of $2 user..."
-cd /home/$2
-echo "Clone the VPS Installer repo..."
-git clone https://github.com/WebDevJL/vps-manager #clone the installer
-
 echo "Start install of Portal on $1"
 echo "Create the directories..."
 mkdir -p /home/$2/www/{public_html,logs}
