@@ -49,7 +49,7 @@ sudo cp /home/$2/vps-manager/assets/sites-available/sql.$1.conf /etc/apache2/sit
 sudo vim /etc/apache2/sites-available/sql.$1.conf
 read -n1 -rsp $'If the conf file of $1 was not empty, press any key to continue otherwise Ctrl+C to exit...\n'
 
-sudo bash /home/$2/vps-manager/sites-available/common/website-ssl-setup.sh $1
+sudo bash /home/$2/vps-manager/sites-available/common/website-ssl-setup.sh sql.$1
 
 echo "Enable sql.$1 website..."
 sudo a2ensite sql.$1.conf
