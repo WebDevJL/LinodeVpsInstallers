@@ -9,6 +9,7 @@ sudo a2enmod cache_disk
 sudo a2enmod expires
 echo "Check the following modules are enabled: cache, cache_disk, expires."
 apachectl -t -D DUMP_MODULES
+apachectl configtest
 sudo systemctl restart apache2
 # for each domain, add the configuration found in assets/sites-available/common/content-caching.conf
 echo "Now, let's test the cache..."
