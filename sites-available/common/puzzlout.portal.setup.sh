@@ -6,10 +6,12 @@ chmod -R 777 /home/$2/www
 rm -R /home/$2/www
 
 echo "Start install of Portal on $1"
-echo "Create the directories: \n /home/$2/www/$1/public_html and /home/$2/www/$1/logs..."
+echo "Create the directories for domain $1 => \n /home/$2/www/$1/public_html and /home/$2/www/$1/logs..."
 mkdir -p /home/$2/www/$1/{public_html,logs}
-ls -l /home/$2
+echo "Checking /home/$2/www"
 ls -l /home/$2/www
+echo "Checking /home/$2/www/$2"
+ls -l /home/$2/www/$1
 read -n1 -rsp $'If all the directories created are displayed, press any key to continue otherwise Ctrl+C to exit...\n'
 echo "Browser to /home/$2/www/$1/public_html..."
 cd /home/$2/www/public_html
