@@ -3,8 +3,11 @@
 #$2 => the UNIX user
 
 echo "Start install of Portal on $1"
-echo "Create the directories..."
+echo "Create the directories: \n /home/$2/www/public_html and /home/$2/www/logs..."
 mkdir -p /home/$2/www/{public_html,logs}
+ls -l /home/$2
+ls -l /home/$2/www
+read -n1 -rsp $'If all the directories created are displayed, press any key to continue otherwise Ctrl+C to exit...\n'
 echo "Browser to /home/$2/www/public_html..."
 cd /home/$2/www/public_html
 echo "Clone the portal repo..."
