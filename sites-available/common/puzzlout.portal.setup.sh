@@ -14,7 +14,7 @@ echo "Checking /home/$2/www/$1"
 ls -l /home/$2/www/$1
 read -n1 -rsp $'If all the directories created are displayed, press any key to continue otherwise Ctrl+C to exit...\n'
 echo "Browser to /home/$2/www/$1/public_html..."
-cd /home/$2/www/public_html
+cd /home/$2/www/$1/public_html
 echo "Clone the portal repo..."
 git clone https://github.com/puzzlout/portal
 echo "Copy the base index.php file in /home/$2/www/$1/public_html/..."
