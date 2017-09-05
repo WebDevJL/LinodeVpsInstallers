@@ -10,7 +10,8 @@ sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 composer
 
 echo "Install of  Node, NPM, Yarn and webpack"
-sudo apt-get install nodejs
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt install -y nodejs
 sudo apt-get install npm
 # Bower has become obsolete
 # --> Yarn instead!
