@@ -5,6 +5,7 @@ echo "Install of fail2ban..."
 apt-get update && apt-get upgrade -y
 apt-get install fail2ban
 apt-get install sendmail
+sendmailconfig
 ufw allow ssh
 ufw enable
 cp /etc/fail2ban/fail2ban.conf /etc/fail2ban/fail2ban.local

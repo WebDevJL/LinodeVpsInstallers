@@ -16,7 +16,7 @@ bash server-commons/basics/set.hosts.sh $vIpV4 $vIpV6 $vHostname
 bash server-commons/basics/set.timezone.sh
 bash server-commons/basics/configure.ssh.sh
 
-bash user-management/add.user.sh $vUser $vUserGroup
+bash server-commons/user-management/add.user.sh $vUser $vUserGroup
 
 # Install of fail2ban
 bash server-commons/basics/fail2ban.sh
