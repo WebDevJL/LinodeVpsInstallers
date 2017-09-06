@@ -13,7 +13,7 @@ echo "Configuring fail2ban..."
 cp ~/vps-manager/assets/conf/fail2ban/jail.local /etc/fail2ban/jail.local
 #cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 #cp /etc/fail2ban/jail.local ~/vps-manager/assets/conf/fail2ban/jail.local
-vim /etc/fail2ban/jail.local
+#vim /etc/fail2ban/jail.local
 fail2ban-client status
 sudo netstat -tulpn
 echo "Done with fail2ban!"
