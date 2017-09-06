@@ -11,7 +11,7 @@ cp /etc/phpmyadmin/config.inc.php /etc/phpmyadmin/config.inc.php.bak
 # line 100:
 # Add $cfg['ForceSSL'] = 'true'; to /etc/phpmyadmin/config.inc.php file
 cp assets/conf/phpmyadmin/config.inc.php /etc/phpmyadmin/config.inc.php
-sudo vim /etc/phpmyadmin/config.inc.php
+#sudo vim /etc/phpmyadmin/config.inc.php
 echo "Done installing phpMyAdmin."
 
 cd ~
