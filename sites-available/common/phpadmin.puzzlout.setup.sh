@@ -2,8 +2,8 @@
 #$1 => the domain to install
 #$2 => the UNIX user
 
-sudo chmod -R 777 /home/$2/www/$1
-sudo rm -R /home/$2/www/$1
+#sudo chmod -R 777 /home/$2/www/sql.$1
+#sudo rm -R /home/$2/www/sql.$1
 sudo a2dissite sql.$1
 sudo rm /etc/apache2/sites-available/sql.$1.conf
 sudo rm /etc/apache2/sites-available/sql.$1-le-ssl.conf
