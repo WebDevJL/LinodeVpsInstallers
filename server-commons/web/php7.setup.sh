@@ -8,7 +8,7 @@ cp /etc/php/7.0/apache2/php.ini /etc/php/7.0/apache2/php.bak.ini
 # see assets/php.conf.md
 #cp /etc/php/7.0/apache2/php.ini assets/conf/php/php.ini.base
 cp assets/conf/php/php.ini /etc/php/7.0/apache2/php.ini
-vim /etc/php/7.0/apache2/php.ini
+#sudo vim /etc/php/7.0/apache2/php.ini
 sudo mkdir /var/log/php
 sudo chown www-data /var/log/php
 echo "Reloading apache2..."
