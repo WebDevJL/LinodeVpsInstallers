@@ -17,7 +17,7 @@ mkdir -p /home/$2/www/sql.$1/{public_html,logs}
 cd /home/$2/www/sql.$1/public_html
 cd /home/$2/www/sql.$1/public_html
 sudo ln -s /usr/share/phpmyadmin
-sudo cp /home/$2/vps-manager/assets/conf/phpmyadmin/.htaccess /home/$2/www/sql.$1/public_html/phpmyadmin/.htaccess
+sudo cp /home/$2/vps-manager/assets/conf/phpmyadmin/.htaccess /usr/share/phpmyadmin/.htaccess
 cd ~
 
 sudo cp /home/$2/vps-manager/assets/sites-available/sql.$1.conf /etc/apache2/sites-available/sql.$1.conf
