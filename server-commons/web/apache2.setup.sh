@@ -11,7 +11,7 @@ sudo cp /etc/apache2/apache2.conf /etc/apache2/apache2.conf.bak
 #KeepAlive Off
 #sudo cp /etc/apache2/apache2.conf ~/vps-manager/assets/conf/apache2/apache2.conf
 sudo cp ~/vps-manager/assets/conf/apache2/apache2.conf /etc/apache2/apache2.conf
-sudo vim /etc/apache2/apache2.conf
+#sudo vim /etc/apache2/apache2.conf
 
 sudo cp /etc/apache2/mods-available/mpm_prefork.conf  /etc/apache2/mods-available/mpm_prefork.back.conf
 sudo cp ~/vps-manager/assets/mpm_prefork.base.conf /etc/apache2/mods-available/mpm_prefork.conf
