@@ -14,7 +14,7 @@ echo "Configure ModSecurity..."
 
 sudo cp assets/conf/security2_module/modsecurity.conf /etc/modsecurity/modsecurity.conf
 sudo service apache2 reload
-read -n1 -rsp $'Press any key to continue or Ctrl+C to exit...\n'
+#read -n1 -rsp $'Press any key to continue or Ctrl+C to exit...\n'
 
 #echo "... and then ModSecurity CRS..."
 # http://www.modsecurity.org/crs/
