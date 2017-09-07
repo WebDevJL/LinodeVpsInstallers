@@ -8,7 +8,7 @@ mkdir -p /home/$2/www/$1/{public_html,logs,src}
 ls -l /home/$2/www/$1
 read -n1 -rsp $'Check /home/$2/www/$1 has 3 folders (public_html, logs and src), Press any key if you see these or Ctrl+C to fix the configuration...\n'
 echo "... them browse to that src directory!"
-cd /home/$2/www/$1/public_html/src
+cd /home/$2/www/$1/src
 #git clone https://github.com/puzzlout/wordpress
 echo "Download the latest wordpress..."
 wget http://wordpress.org/latest.tar.gz
