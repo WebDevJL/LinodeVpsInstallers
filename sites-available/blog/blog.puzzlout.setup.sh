@@ -1,11 +1,20 @@
 #!/bin/bash
-# $1 => example : "blog.puzzlout.ovh
+# $1 => the domain. example : blog.puzzlout.ovh
+# $2 => the user. example : "puzzlout
 #Install of Portal on puzzlout.ovh"
 echo "Install of Blog on $1"
-mkdir -p /home/puzzlout/www/$1/{public_html,logs}
-cd /home/puzzlout/www/$1/public_html
+echo "Creatign basics directories for $1"
+mkdir -p /home/$2/www/$1/{public_html,logs}
+echo "Browse to /home/$2/www/$1/public_html"
+cd /home/$2/www/$1/public_html
+echo "Create the directory where the wordpress install is stored..."
+mkdir src
+echo "... them browse to that src directory!"
+cd src
 #git clone https://github.com/puzzlout/wordpress
+echo "Download the latest wordpress..."
 wget https://wordpress.org/latest.tar.gz
+echo "... and unzip it!"
 tar -xzvf latest.tar.gz 
 rm latest.tar.gz
 sudo chmod -R 777 wordpress
