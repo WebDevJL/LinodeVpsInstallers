@@ -46,7 +46,7 @@ sudo chown -R www-data:www-data ../public_html/
 read -n1 -rsp $'Login to $1, Press any key if you see the dashboard or Ctrl+C to fix the configuration...\n'
 # /** Bypass FTP */
 # define('FS_METHOD', 'direct');
-read -n1 -rsp $'Add define(\'FS_METHOD\', \'direct\'); to wp-config.php and update any plugin that needs it, Press any key if you successfully updated the plugins or Ctrl+C to fix the configuration...\n'
+read -n1 -rsp $'Add a define with Key=FS_METHOD and value=direct to wp-config.php and update any plugin that needs it, Press any key if you successfully updated the plugins or Ctrl+C to fix the configuration...\n'
 sudo vim wp-config.php
 read -n1 -rsp $'Press any key if you successfully updated all the plugins or Ctrl+C to fix the configuration...\n'
 echo "Verify rewrite module is enabled..."
