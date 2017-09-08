@@ -22,7 +22,7 @@ echo "... and remove the src/wordpress folder..."
 rm -R wordpress
 echo "Browse to public_html folder..."
 cd ../public_html
-echo "... and modify the permissions on wp-config.php file to 777
+echo "... and modify the permissions on wp-config.php file to 777"
 chmod 777 wp-config.php
 
 sudo cp /vps-manager/assets/sites-available/$1.conf /etc/apache2/sites-available/$1.conf
@@ -55,4 +55,3 @@ read -n1 -rsp $'Press any key if you see Module rewrite already enabled or Ctrl+
 echo "Wordpress install and initial setup is complete! Proceed to optimisations :)"
 
 cd ~
-cd ..
