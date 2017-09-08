@@ -22,10 +22,8 @@ echo "... and remove the src/wordpress folder..."
 rm -R wordpress
 echo "Browse to public_html folder..."
 cd ../public_html
-echo "... and modify the permissions on wp-config.php file to 777"
-chmod 777 wp-config.php
 
-sudo cp /vps-manager/assets/sites-available/$1.conf /etc/apache2/sites-available/$1.conf
+sudo cp /home/$2/vps-manager/assets/sites-available/$1.conf /etc/apache2/sites-available/$1.conf
 sudo vim /etc/apache2/sites-available/$1.conf
 sudo apachectl configtest
 # Generate the certs Let's Encrypt for the domain
@@ -37,6 +35,8 @@ read -n1 -rsp $'Browse to $1, Press any key if you see the wordpress install scr
 echo "Force temporaly the permissions to enable the wp-config.php file creation."
 chmod -R 777 ../public_html
 read -n1 -rsp $'Resume and finish the install on $1 until you are ready to login as the admin, Press any key if you see the wordpress login page or Ctrl+C to fix the configuration...\n'
+echo "... and modify the permissions on wp-config.php file to 777"
+chmod 777 wp-config.php
 echo "Revert permissions to 755..."
 sudo chmod -R 755 ../public_html
 echo "... except for wp-config.php that remains 777"
