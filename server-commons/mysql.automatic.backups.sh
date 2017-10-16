@@ -13,11 +13,10 @@ newDirForBackup=$( date '+%Y-%m-%d' )
 sudo mkdir $newDirForBackup
 cd $newDirForBackup
 cd ~
-read -n1 -rsp $'Have you created the "backup" mysql user? Do it now before continuing. pThen press any key to continue or Ctrl+C to exit...\n'
+read -n1 -rsp $'Have you created the "backup" mysql user? Do it now before continuing. Then press any key to continue and edit the task or Ctrl+C to exit...\n'
 sudo vim /var/mysql/tasks/create.backup.sh
 sudo bash /var/mysql/tasks/create.backup.sh
+read -n1 -rsp $'Did it run ok? If so, press any key to continue or Ctrl+C to tweak the setup...\n'
 
-echo "Set the cron task following the example below..."
-echo "0 1 * * * /usr/bin/mysqldump --all-databases > dump-$( date '+%Y-%m-%d_%H-%M-%S' ).sql -u root -pPASSWORD"
 cd ~
 "MySQL backups enabled!"
